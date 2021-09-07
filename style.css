@@ -9,9 +9,7 @@
 }
 
 .header {
-    /* height: auto; */
     max-width: 95vw;
-    /* width: 50vw; */
 }
 
 .anim {
@@ -83,4 +81,8 @@ a:hover {
 
 .inline-element {
     display: inline;
+}
+
+.far-down {
+    margin-top: 1500px;
 }
