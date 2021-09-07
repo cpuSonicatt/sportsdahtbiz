@@ -9,7 +9,9 @@
 }
 
 .header {
-    width: 95vw;
+    /* height: auto; */
+    max-width: 95vw;
+    /* width: 50vw; */
 }
 
 .anim {
