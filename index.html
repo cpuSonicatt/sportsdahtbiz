@@ -1,0 +1,64 @@
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>SPORTZ DAHT BIZ</title>
+</head>
+<body>
+    <div class="center">
+        <img src="resources/sdbHeader.gif">
+        <p class="white p-large">Welcome to the <em>Sports Daht Biz</em> homepage!!!</p>
+        <img width="500px" height="500px" src="resources/homeGalaxy.gif">
+        <p class="white p-large">Don't forget to sign our guestbook</p>
+        <div class="content">
+            <ul class="white p-med">
+                <li><a href="./pages/about.html">About SPORTS DAHT BIZ</a></li>
+                <li><a href="./pages/social.html">Follow me on the interweb</a></li>
+                <li><a href="./pages/friends.html">Top friends</a></li>
+                <li><a href="./pages/projects.html">Current projects!!</a></li>
+                <li><a href="./pages/blog.html">Sports Daht Biz personal blog</a></li>
+                <li><a href="./pages/sponsorships.html">Sponsorships</a></li>
+
+            </ul>
+        </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <p class="white footer-element" id="unique-visitors"></p>
+        <p class="white footer-element">This page hosted by cpuCities Get your own Free Home Page</p>
+    </div>
+
+    <script>
+        function setUniqueVisitors() {
+            document.getElementById("unique-visitors").innerHTML = `Unique Visitors: ${getUniqueVisitors()}`
+        }
+
+        function getUniqueVisitors() {
+            return Date.now().toString().substring(1, 9)
+        }
+
+        function updateUniqueVisitors() {
+            document.getElementById("unique-visitors").innerHTML = `Unique Visitors: ${getUniqueVisitors()}`
+        }
+
+        setUniqueVisitors()
+        window.setInterval(updateUniqueVisitors, 2500)
+    </script>
+</body>
+
+<!-- 
+TODO:
+
+- Site map
+- About me
+- Socials
+- Top 5 friends
+- A whole ton of gifs
+- Projects
+- Footer for cpuCities
+- "Sign my guestbook"
+- personal blog -> 404
+- this page is under contruction
+- sponsorships (McFoodies hype meal)
+ -->

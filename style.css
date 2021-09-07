@@ -1,0 +1,66 @@
+body {
+    background-image: url(./resources/background.jpg);
+}
+
+.center {
+    text-align: center;
+}
+
+.p-large {
+    font-size: xx-large;
+}
+
+.p-med {
+    font-size: x-large;
+}
+
+.p-small {
+    font-size: large;
+}
+
+p em {
+    color: goldenrod;
+}
+
+.white {
+    color: white
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 10;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+.footer-element {
+    margin: 0 250px;
+    display: inline;
+}
+
+.content {
+    margin: 100px 0
+}
+
+ul {
+    list-style-type: none;
+}
+
+a:link,
+a:visited {
+    color: goldenrod
+}
+
+a:hover {
+    color: gold
+}
+
+.inline {
+    margin-bottom: 100px;
+}
+
+.inline-element {
+    display: inline;
+}
