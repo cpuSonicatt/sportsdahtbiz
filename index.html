@@ -5,8 +5,9 @@
 </head>
 <body>
     <div class="center">
-        <img src="resources/sdbHeader.gif">
+        <img class="header" src="resources/sdbHeader.gif">
         <p class="white p-large">Welcome to the <em>Sports Daht Biz</em> homepage!!!</p>
+        <p class="white p-small">Best viewed in 800x600 with Netscape 6.0</p>
         <img width="500px" height="500px" src="resources/homeGalaxy.gif">
         <p class="white p-large">Don't forget to sign our guestbook</p>
         <div class="content">
@@ -26,23 +27,47 @@
 
     <div class="footer">
         <p class="white footer-element" id="unique-visitors"></p>
-        <p class="white footer-element">This page hosted by cpuCities Get your own Free Home Page</p>
+        <p class="white footer-element">This page hosted by <a target="_blank" href="https://github.com/cpuSonicatt/sportsdahtbiz">cpuCities</a> Get your own <a target="_blank" href="https://html.com/">Free Home Page</a></p>
     </div>
 
     <script>
-        function setUniqueVisitors() {
-            document.getElementById("unique-visitors").innerHTML = `Unique Visitors: ${getUniqueVisitors()}`
+        /**
+         * This function manages the Unique Visitors counter.
+         * 
+         * It uses epoch time accurate to the millisecond, with the 1st digit
+         * and the last 4 digits cut off to lower the overall value and slow down increase rate
+         * in order to produce the effect of unique users visiting the site in real-time.
+         * In actuality, the number updates every 10 seconds.
+         * 
+         * It also pulses red when a "new" user "visits" the site.
+        **/
+
+        let currentUniqueVisitors = getCurrentTime()
+        function setUniqueVisitors(x) {
+            document.getElementById("unique-visitors").innerHTML = `Unique Visitors: ${x}`
         }
 
         function getUniqueVisitors() {
+            return currentUniqueVisitors
+        }
+
+        function getCurrentTime() {
             return Date.now().toString().substring(1, 9)
         }
 
         function updateUniqueVisitors() {
-            document.getElementById("unique-visitors").innerHTML = `Unique Visitors: ${getUniqueVisitors()}`
+            let element = document.getElementById("unique-visitors")
+            if (getCurrentTime() != currentUniqueVisitors) {
+                element.classList.remove("anim")
+                void element.offsetWidth
+                currentUniqueVisitors = getCurrentTime()
+                setUniqueVisitors(currentUniqueVisitors)
+                element.classList.add("anim")
+            }
+            
         }
 
-        setUniqueVisitors()
+        setUniqueVisitors(currentUniqueVisitors)
         window.setInterval(updateUniqueVisitors, 2500)
     </script>
 </body>
