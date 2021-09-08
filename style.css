@@ -17,7 +17,7 @@
 }
 
 body {
-    background-image: url(./resources/background.jpg);
+    background-image: url(./resources/misc/background.jpg);
 }
 
 .center {
@@ -85,4 +85,64 @@ a:hover {
 
 .far-down {
     margin-top: 1500px;
+}
+
+.top-left {
+    position: absolute;
+    top: 25;
+    left: 0;
+}
+
+.top-right {
+    position: absolute;
+    top: 25;
+    right: 0;
+}
+
+.uc-1 {
+    position: absolute;
+    top: 100;
+    left: 15%;
+}
+
+.uc-2 {
+    position: absolute;
+    top: 200;
+    left: 60%;
+}
+
+.uc-3 {
+    position: absolute;
+    top: 300;
+    left: 25%;
+}
+
+.uc-4 {
+    position: absolute;
+    top: 400;
+    left: 75%;
+}
+
+.uc-5 {
+    position: absolute;
+    top: 500;
+    left: 50%;
+}
+
+table, td {
+    border:1px solid goldenrod;
+}
+
+td {
+    padding: 25px;
+}
+
+table {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.thin {
+    max-width: 50%;
 }

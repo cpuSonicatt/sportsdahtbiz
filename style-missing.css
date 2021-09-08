@@ -1,0 +1,47 @@
+body {
+   background-color: #FEFEFE
+}
+
+h1, h2, p {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+h1 {
+    margin: 0;
+    font-size: 150px;
+    color: red;
+}
+
+h2 {
+    font-size: x-large;
+    color: red;
+}
+
+img {
+    border: 5px solid black;
+}
+
+
+.inline {
+    margin-bottom: 50px;
+    display: flex
+}
+
+.inline-element {
+    margin: 25px 100px;
+    width: 50%;
+}
+
+.center {
+    text-align: center;
+}
+
+a:link,
+a:visited {
+    color: blue
+}
+
+a:hover {
+    color: #000055
+}
