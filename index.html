@@ -20,6 +20,7 @@
                 <li><a href="./pages/friends.html">Top friends</a></li>
                 <li><a href="./pages/blog.html">Sports Daht Biz personal blog</a></li>
                 <li><a href="./pages/sponsorships.html">Sponsorships</a></li>
+                <li><a href="javascript:;" onclick="handleAge()">I got a new drink! (18+!!)</a></li>
                 <li><a href="./pages/merch.html">New merch coming soon!</a></li>
             </ul>
             <br>
@@ -33,6 +34,15 @@
         <p class="white footer-element" id="unique-visitors"></p>
         <p class="white footer-element">This page hosted by <a target="_blank" href="https://github.com/cpuSonicatt/sportsdahtbiz">cpuCities</a> Get your own <a target="_blank" href="https://html.com/">Free Home Page</a></p>
     </div>
+
+    <script>
+        function handleAge() {
+            let test = window.confirm("click 'ok' if you're 18 or over! dont lie!")
+            if (test) {
+                location.replace("pages/drink.html")
+            }
+        }
+    </script>
 
     <script>
         /**
