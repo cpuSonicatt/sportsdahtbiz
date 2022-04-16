@@ -8,6 +8,10 @@
     }
 }
 
+.bigger {
+    font-size: 64px;
+}
+
 .header {
     max-width: 95vw;
 }
