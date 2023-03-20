@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <pre>
+require "acrux-ultra-reciever" as RCVR("v0.72") # vulnerable version
+
+# Reciever exploit for Acrux models
+#
+# The exploit works on version v0.72, a verison that had developer
+# methods released accidentally. Older models of Reciever still
+# accept this version.
+#
+# To use:
+# 1) Plug Reciever into computer
+# 2) set ID variable and run
+# 3) Unplug Reciever and reboot it
+#
+# When you text your Reciever ID, you'll text me without raising any suspision (since to them, you're texting yourself). I've done the same.
+#
+# Love you. -R
+
+func main() {
+    let ID = "" # reciever ID
+    let INJECT = [6A,75,73,74,20,70,72,65,74,65,6E,64,20,74,68,69,73,20,69,73,20,73,6F,6D,65,20,66,61,6E,63,79,20,63,6F,64,65] # payload to inject
+    let device = new RCVR().setupPhysical("~/Acrux 4") # register device
+    device._dev_set_credit(65535) # set to max
+
+    device.call(ID).then({ # call self, cause credit to overflow by 1, mem pointer gets confused, writes incoming text to OOB memory instead of storage
+        sys.sleep(60000)
+        device.getCredit() 
+        device.text(ID, INJECT)
+    }).terminate()
+}
+
+        </pre>
+    </body>
+</html>
