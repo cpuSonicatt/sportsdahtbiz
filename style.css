@@ -1,0 +1,152 @@
+@keyframes highlight {
+    0% {
+        color: red
+    }
+
+    100% {
+        color: white;
+    }
+}
+
+.bigger {
+    font-size: 64px;
+}
+
+.header {
+    max-width: 95vw;
+}
+
+.anim {
+    animation: highlight 1s;
+}
+
+body {
+    background-image: url(./resources/misc/background.jpg);
+}
+
+.center {
+    text-align: center;
+}
+
+.p-large {
+    font-size: xx-large;
+}
+
+.p-med {
+    font-size: x-large;
+}
+
+.p-small {
+    font-size: large;
+}
+
+p em {
+    color: goldenrod;
+}
+
+.white {
+    color: white
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 10;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+.footer-element {
+    margin: 0 5%;
+    display: inline;
+}
+
+.content {
+    margin: 100px 0
+}
+
+ul {
+    list-style-type: none;
+}
+
+a:link,
+a:visited {
+    color: goldenrod
+}
+
+a:hover {
+    color: gold
+}
+
+.inline {
+    margin-bottom: 100px;
+}
+
+.inline-element {
+    display: inline;
+}
+
+.far-down {
+    margin-top: 1500px;
+}
+
+.top-left {
+    position: absolute;
+    top: 25;
+    left: 0;
+}
+
+.top-right {
+    position: absolute;
+    top: 25;
+    right: 0;
+}
+
+.uc-1 {
+    position: absolute;
+    top: 100;
+    left: 15%;
+}
+
+.uc-2 {
+    position: absolute;
+    top: 200;
+    left: 60%;
+}
+
+.uc-3 {
+    position: absolute;
+    top: 300;
+    left: 25%;
+}
+
+.uc-4 {
+    position: absolute;
+    top: 400;
+    left: 75%;
+}
+
+.uc-5 {
+    position: absolute;
+    top: 500;
+    left: 50%;
+}
+
+table, td {
+    border:1px solid goldenrod;
+}
+
+td {
+    padding: 25px;
+}
+
+table {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.thin {
+    max-width: 50%;
+}

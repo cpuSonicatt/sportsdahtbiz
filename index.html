@@ -1,0 +1,93 @@
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>SPORTZ DAHT BIZ</title>
+</head>
+<body>
+    <img class="top-left" src="./resources/misc/sdbRotating.gif">
+    <img class="top-right" src="./resources/misc/sdbRotating.gif">
+
+    <div class="center">
+        <img class="header" src="resources/headers/sdbHeader.gif">
+        <p class="white p-large">Welcome to the <em>Sports Daht Biz</em> homepage!!!</p>
+        <p class="white p-small">Best viewed in 800x600 with Netscape 6.0</p>
+        <img width="500px" height="500px" src="resources/misc/homeGalaxy.gif">
+        <p class="white p-large">Don't forget to sign my <a href="pages/guestbook.html">guestbook</a></p>
+        <div class="content">
+            <ul class="white p-med">
+                <li><a href="./pages/evac.html"><b class="bigger">EVACUATION PLAN!</b></a></li>
+                <li><a>.</a></li>
+                <li><a>.</a></li>
+                <li><a>.</a></li>
+                <li><a>.</a></li>
+
+                <li><a href="./pages/about.html">About SPORTS DAHT BIZ</a></li>
+                <li><a href="./pages/social.html">Follow me on the interweb</a></li>
+                <li><a href="./pages/friends.html">Top friends</a></li>
+                <li><a href="./pages/blog.html">Sports Daht Biz personal blog</a></li>
+                <li><a href="./pages/sponsorships.html">Sponsorships</a></li>
+                <li><a href="javascript:;" onclick="handleAge()">I got a new drink! (18+!!)</a></li>
+                <li><a href="./pages/merch.html">New merch coming soon!</a></li>
+            </ul>
+            <br>
+            <p class="white p-med">Thank you for visiting my page</p>
+            <img src="resources/misc/sdbSignature.gif">
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p class="white footer-element" id="unique-visitors"></p>
+        <p class="white footer-element">This page hosted by <a target="_blank" href="https://github.com/cpuSonicatt/sportsdahtbiz">cpuCities</a> Get your own <a target="_blank" href="https://html.com/">Free Home Page</a></p>
+    </div>
+
+    <script>
+        function handleAge() {
+            let test = window.confirm("click 'ok' if you're 18 or over! dont lie!")
+            if (test) {
+                location.replace("pages/drink.html")
+            }
+        }
+    </script>
+
+    <script>
+        /**
+         * This function manages the Unique Visitors counter.
+         * 
+         * It uses epoch time accurate to the millisecond, with the 1st digit
+         * and the last 4 digits cut off to lower the overall value and slow down increase rate
+         * in order to produce the effect of unique users visiting the site in real-time.
+         * In actuality, the number updates every 10 seconds.
+         * 
+         * It also pulses red when a "new" user "visits" the site.
+        **/
+
+        let currentUniqueVisitors = getCurrentTime()
+        function setUniqueVisitors(x) {
+            document.getElementById("unique-visitors").innerHTML = `Unique Visitors: ${x}`
+        }
+
+        function getUniqueVisitors() {
+            return currentUniqueVisitors
+        }
+
+        function getCurrentTime() {
+            return Date.now().toString().substring(1, 9)
+        }
+
+        function updateUniqueVisitors() {
+            let element = document.getElementById("unique-visitors")
+            if (getCurrentTime() != currentUniqueVisitors) {
+                element.classList.remove("anim")
+                void element.offsetWidth
+                currentUniqueVisitors = getCurrentTime()
+                setUniqueVisitors(currentUniqueVisitors)
+                element.classList.add("anim")
+            }
+            
+        }
+
+        setUniqueVisitors(currentUniqueVisitors)
+        window.setInterval(updateUniqueVisitors, 2500)
+    </script>
+</body>
